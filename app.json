@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/guanwang/guanwang"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "名片",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#757575",
+    "selectedColor": "#15aefa",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "名片",
+        "iconPath": "./static/images/mingpian.png",
+        "selectedIconPath": "./static/images/mingpian1.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "商城",
+        "iconPath": "./static/images/sc.png",
+        "selectedIconPath": "./static/images/sc1.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "动态",
+        "iconPath": "./static/images/faxian.png",
+        "selectedIconPath": "./static/images/faxian1.png"
+      },
+      {
+        "pagePath": "pages/guanwang/guanwang",
+        "text": "官网",
+        "iconPath": "./static/images/guanwang.png",
+        "selectedIconPath": "./static/images/guanwang1.png"
+      }
+    ]
+  }
+}

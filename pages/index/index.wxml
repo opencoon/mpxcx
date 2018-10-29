@@ -1,0 +1,64 @@
+<!--index.wxml-->
+<view style='background-color:#f6f6f6;height:240px;width:100%;'>
+    <view class='mp-top'>
+      <view style='padding:20px;'></view>
+    </view>
+</view>
+<view style='background-color:#f9f9f9;width:100%;line-height:45px;padding:0 20px;'>
+  <view style='font-size:13px;color:#8c8c8c;text-align:center;' wx:if="{{cardinfo}}" bindtap='changecdsta'>展开全部名片信息 <icon class='iconfont icon-xia'></icon></view>
+  <view style='font-size:13px;color:#8c8c8c;text-align:center;'wx:else bindtap='changecdsta'>收起以下名片信息 <icon class='iconfont icon-shang'></icon></view>
+</view>
+
+<view style='font-size:14px;padding:5px 20px;background-color:#f9f9f9' wx:if="{{!cardinfo}}">
+  <view style='height:32px;line-height:32px;position:relative;'>
+    <label style='color:#a9a9a9;margin-right:15px;'>手机</label>13800000000 
+    <label style='display:inline-bolck;width:50px;position:absolute;right:0px;border:1px solid #15aefa;text-align:center;height:20px;line-height:20px;color:#15aefa;top:5px;'>拨打</label>
+  </view>
+  <view style='height:32px;line-height:32px;position:relative;'>
+    <label style='color:#a9a9a9;margin-right:15px;'>微信</label>webqt 
+    <label style='display:inline-bolck;width:50px;position:absolute;right:0px;border:1px solid #15aefa;text-align:center;height:20px;line-height:20px;color:#15aefa;top:5px;'>复制</label>
+  </view>
+  <view style='height:32px;line-height:32px;position:relative;'>
+    <label style='color:#a9a9a9;margin-right:15px;'>邮箱</label>try@webqt.com 
+    <label style='display:inline-bolck;width:50px;position:absolute;right:0px;border:1px solid #15aefa;text-align:center;height:20px;line-height:20px;color:#15aefa;top:5px;'>复制</label>
+  </view>
+  <view style='height:32px;line-height:32px;position:relative;'>
+    <label style='color:#a9a9a9;margin-right:15px;'>座机</label>020-8888888 
+    <label style='display:inline-bolck;width:50px;position:absolute;right:0px;border:1px solid #15aefa;text-align:center;height:20px;line-height:20px;color:#15aefa;top:5px;'>拨打</label>
+  </view>
+  <view style='height:32px;line-height:32px;position:relative;'>
+    <label style='color:#a9a9a9;margin-right:15px;'>地址</label>广州市越秀区中侨大厦18楼D/E 
+    <label style='display:inline-bolck;width:50px;position:absolute;right:0px;border:1px solid #15aefa;text-align:center;height:20px;line-height:20px;color:#15aefa;top:5px;'>拨打</label>
+  </view>
+</view>
+
+
+<view style='height:60px;line-height:50px;display:flex;align-items:center;width:100%;background-color:#fbfbfb;'>
+  <button style='width:40%;height:37px;line-height:35px;border:1px solid #48b6e6;color:#48b6e6;font-size:16px;background-color:white;'>分享</button>
+  <button style='width:40%;height:37px;line-height:35px;font-size:16px;background-color:#15aefa;color:white'>保存通讯录</button>
+</view>
+<view style='height:50px;width:100%;padding:13px 0;'>
+  <view style='height:20px;padding:0px 20px;line-height:20px;position:relative;'>
+    <image src='https://www.entertry.com/upload/1b63128bf3cc49199d20abba1b30e401.jpeg' style='width:20px;height:20px;display:inline-block;margin-right:2px;border-radius:2px;'></image>
+    <image src='https://www.entertry.com/upload/1b63128bf3cc49199d20abba1b30e401.jpeg' style='width:20px;height:20px;display:inline-block;margin-right:2px;border-radius:2px;'></image>
+    <image src='https://www.entertry.com/upload/1b63128bf3cc49199d20abba1b30e401.jpeg' style='width:20px;height:20px;display:inline-block;margin-right:2px;border-radius:2px;'></image>
+    <image src='https://www.entertry.com/upload/1b63128bf3cc49199d20abba1b30e401.jpeg' style='width:20px;height:20px;display:inline-block;margin-right:2px;border-radius:2px;'></image>
+    <image src='https://www.entertry.com/upload/1b63128bf3cc49199d20abba1b30e401.jpeg' style='width:20px;height:20px;display:inline-block;margin-right:2px;border-radius:2px;'></image>
+    <image src='https://www.entertry.com/upload/1b63128bf3cc49199d20abba1b30e401.jpeg' style='width:20px;height:20px;display:inline-block;margin-right:2px;border-radius:2px;'></image>
+    <label style='color:#bbb'>...</label>
+    <label class='iconfont icon-xinxing' style='color:#989898;position:absolute;right:28px;top:1px;font-size:20px;'></label>
+  </view>
+  <view style='height:20px;padding:2px 10px;line-height:20px;font-size:11px;position:relative;color:#aaa;border-bottom:10px solid #f5f5f5;padding-bottom:12px;'>
+    <text style='line-height:27px;padding:0px 10px;'>浏览：6</text>
+    <label style='line-height:20px;position:absolute;right:25px;top:4px;'>点赞 3</label>
+  </view>
+</view>
+<view style='border-bottom:10px solid #f5f5f5;padding-bottom:5px;'>
+  <view style='font-size:15px;font-weight:bold;padding:10px 20px;'>我的个人简介</view>
+  <view style='font-size:14px;color:#b0b0b0;padding:5px 20px;'>大家好，我是某某某，企泰科技开发人员；大家好，我是某某某，企泰科技开发人员；大家好，我是某某某，企泰科技开发人员；大家好，我是某某某，企泰科技开发人员；大家好，我是某某某，企泰科技开发人员；大家好，我是某某某，企泰科技开发人员；大家好，我是某某某，企泰科技开发人员；大家好，我是某某某，企泰科技开发人员；</view>
+</view>
+<view style='height:100%;width:100%;padding-bottom:5px;'>
+  <view style='font-size:15px;font-weight:bold;padding:10px 20px;'>我的照片</view>
+  <image src='https://entertry.com/upload/20181029163005.jpg' style='height:450px;'></image>
+</view>
+<view style='width:40px;height:40px;line-height:40px;background-color:black;border-top-right-radius:25px;border-bottom-right-radius:25px;position:fixed;top:30px;opacity:0.38'><label class='iconfont icon-cards' style='color:white;font-size:21px;margin-left:5px;'></label></view>
