@@ -1,64 +1,85 @@
 <!--index.wxml-->
-<view style='background-color:#f6f6f6;height:240px;width:100%;'>
-    <view class='mp-top'>
-      <view style='padding:20px;'></view>
+<view style='background-color:#f7f7f7;height:240px;width:100%;position:relative;overflow:hidden;'>
+  <view class='mp-top' style='width:375px;margin:0 auto;'>
+    <view style='padding:20px;position:relative;'>
+      <image style='height: 194px;width: 194px;z-index:1;border:3px solid white;border-top-left-radius:10px;border-bottom-left-radius:10px;box-shadow:1px 1px 2px #bbb' src='https://www.entertry.com/upload/1b63128bf3cc49199d20abba1b30e401.jpeg'></image>
+      <view style='height: 0px;width: 40%;border-left:70px solid transparent;border-bottom:202px solid #f9f9f9;position:absolute;right:20px;top:20px;border-top-right-radius:10px;'></view>
+      <view style='height: 0px;width: 36%;border-left:70px solid transparent;border-bottom:202px solid white;position:absolute;right:20px;top:20px;border-top-right-radius:10px;border-right:0px solid red;'></view>
+      <view>
+        <image src='https://www.entertry.com/upload/qticon.ico' style='width:12px;height:12px;position:absolute;right:138px;z-index:5;top:35px;'></image>
+        <label style='font-size:11px;position:absolute;right:33px;z-index:5;top:32.5px;width:100px;'>{{cardobj.company.name}}</label>
+        <label style='font-size:15px;font-weight:bold;position:absolute;right:65px;z-index:5;top:80px;width:100px;'>{{cardobj.empname}}</label>
+        <label style='font-size:12px;position:absolute;right:65px;z-index:5;top:103px;width:100px;'>{{cardobj.emppost}}</label>
+        <label style='font-size:11.5px;position:absolute;right:20px;z-index:5;top:162px;width:100px;color:#7b7b7b;'>{{cardobj.mobnum}}
+          <label class='iconfont icon-dianhua' style='font-size:11.5px;margin-left:5px;color:#15aefa;'></label>
+        </label>
+        <label style='font-size:11px;position:absolute;right:-5px;z-index:5;top:185px;width:200px;color:#7b7b7b;'>{{cardobj.address}}
+          <label class='iconfont icon-dingwei' style='margin-left:5px;font-size:11.5px;color:#15aefa;'></label>
+        </label>
+      </view>
     </view>
+  </view>
 </view>
-<view style='background-color:#f9f9f9;width:100%;line-height:45px;padding:0 20px;'>
-  <view style='font-size:13px;color:#8c8c8c;text-align:center;' wx:if="{{cardinfo}}" bindtap='changecdsta'>展开全部名片信息 <icon class='iconfont icon-xia'></icon></view>
-  <view style='font-size:13px;color:#8c8c8c;text-align:center;'wx:else bindtap='changecdsta'>收起以下名片信息 <icon class='iconfont icon-shang'></icon></view>
+<view style='background-color:#f9f9f9;width:100%;line-height:45px;'>
+  <view style='font-size:13px;color:#8c8c8c;text-align:center;padding:0 20px;' wx:if="{{cardinfo}}" bindtap='changecdsta'>展开全部名片信息
+    <icon class='iconfont icon-xia'></icon>
+  </view>
+  <view style='font-size:13px;color:#8c8c8c;text-align:center;padding:0 20px;' wx:else bindtap='changecdsta'>收起以下名片信息
+    <icon class='iconfont icon-shang'></icon>
+  </view>
 </view>
 
 <view style='font-size:14px;padding:5px 20px;background-color:#f9f9f9' wx:if="{{!cardinfo}}">
   <view style='height:32px;line-height:32px;position:relative;'>
-    <label style='color:#a9a9a9;margin-right:15px;'>手机</label>13800000000 
-    <label style='display:inline-bolck;width:50px;position:absolute;right:0px;border:1px solid #15aefa;text-align:center;height:20px;line-height:20px;color:#15aefa;top:5px;'>拨打</label>
+    <label style='color:#a9a9a9;margin-right:15px;'>手机</label>{{cardobj.mobnum}}
+    <label style='display:inline-bolck;width:50px;position:absolute;right:0px;border:1px solid #15aefa;text-align:center;height:20px;line-height:20px;color:#15aefa;top:5px;' bindtap='bindcallpop' data-num='{{cardobj.mobnum}}'>拨打</label>
   </view>
   <view style='height:32px;line-height:32px;position:relative;'>
-    <label style='color:#a9a9a9;margin-right:15px;'>微信</label>webqt 
-    <label style='display:inline-bolck;width:50px;position:absolute;right:0px;border:1px solid #15aefa;text-align:center;height:20px;line-height:20px;color:#15aefa;top:5px;'>复制</label>
+    <label style='color:#a9a9a9;margin-right:15px;'>微信</label>{{cardobj.wxnum}}
+    <label style='display:inline-bolck;width:50px;position:absolute;right:0px;border:1px solid #15aefa;text-align:center;height:20px;line-height:20px;color:#15aefa;top:5px;' bindtap='bindClickboardData' data-cont='{{cardobj.wxnum}}'>复制</label>
   </view>
   <view style='height:32px;line-height:32px;position:relative;'>
-    <label style='color:#a9a9a9;margin-right:15px;'>邮箱</label>try@webqt.com 
-    <label style='display:inline-bolck;width:50px;position:absolute;right:0px;border:1px solid #15aefa;text-align:center;height:20px;line-height:20px;color:#15aefa;top:5px;'>复制</label>
+    <label style='color:#a9a9a9;margin-right:15px;'>邮箱</label>{{cardobj.email}}
+    <label style='display:inline-bolck;width:50px;position:absolute;right:0px;border:1px solid #15aefa;text-align:center;height:20px;line-height:20px;color:#15aefa;top:5px;' bindtap='bindClickboardData' data-cont='{{cardobj.email}}'>复制</label>
   </view>
   <view style='height:32px;line-height:32px;position:relative;'>
-    <label style='color:#a9a9a9;margin-right:15px;'>座机</label>020-8888888 
-    <label style='display:inline-bolck;width:50px;position:absolute;right:0px;border:1px solid #15aefa;text-align:center;height:20px;line-height:20px;color:#15aefa;top:5px;'>拨打</label>
+    <label style='color:#a9a9a9;margin-right:15px;'>座机</label>{{cardobj.telphone}}
+    <label style='display:inline-bolck;width:50px;position:absolute;right:0px;border:1px solid #15aefa;text-align:center;height:20px;line-height:20px;color:#15aefa;top:5px;' bindtap='bindcallpop' data-num='{{cardobj.telphone}}'>拨打</label>
   </view>
   <view style='height:32px;line-height:32px;position:relative;'>
-    <label style='color:#a9a9a9;margin-right:15px;'>地址</label>广州市越秀区中侨大厦18楼D/E 
-    <label style='display:inline-bolck;width:50px;position:absolute;right:0px;border:1px solid #15aefa;text-align:center;height:20px;line-height:20px;color:#15aefa;top:5px;'>拨打</label>
+    <label style='color:#a9a9a9;margin-right:15px;'>地址</label>{{cardobj.address}}
+    <label style='display:inline-bolck;width:50px;position:absolute;right:0px;border:1px solid #15aefa;text-align:center;height:20px;line-height:20px;color:#15aefa;top:5px;' bindtap='bindClickboardData' data-cont='{{cardobj.address}}'>复制</label>
   </view>
 </view>
 
 
-<view style='height:60px;line-height:50px;display:flex;align-items:center;width:100%;background-color:#fbfbfb;'>
-  <button style='width:40%;height:37px;line-height:35px;border:1px solid #48b6e6;color:#48b6e6;font-size:16px;background-color:white;'>分享</button>
-  <button style='width:40%;height:37px;line-height:35px;font-size:16px;background-color:#15aefa;color:white'>保存通讯录</button>
+<view style='height:60px;line-height:50px;display:flex;align-items:center;width:100%;background-color:#f9f9f9;'>
+  <button style='width:40%;height:37px;line-height:35px;border:1px solid #48b6e6;color:#48b6e6;font-size:16px;background-color:white;' open-type='share'>分享</button>
+  <button style='width:40%;height:37px;line-height:35px;font-size:16px;background-color:#15aefa;color:white' bindtap='bindAddPhoneContact'>保存通讯录</button>
 </view>
 <view style='height:50px;width:100%;padding:13px 0;'>
   <view style='height:20px;padding:0px 20px;line-height:20px;position:relative;'>
     <image src='https://www.entertry.com/upload/1b63128bf3cc49199d20abba1b30e401.jpeg' style='width:20px;height:20px;display:inline-block;margin-right:2px;border-radius:2px;'></image>
-    <image src='https://www.entertry.com/upload/1b63128bf3cc49199d20abba1b30e401.jpeg' style='width:20px;height:20px;display:inline-block;margin-right:2px;border-radius:2px;'></image>
-    <image src='https://www.entertry.com/upload/1b63128bf3cc49199d20abba1b30e401.jpeg' style='width:20px;height:20px;display:inline-block;margin-right:2px;border-radius:2px;'></image>
-    <image src='https://www.entertry.com/upload/1b63128bf3cc49199d20abba1b30e401.jpeg' style='width:20px;height:20px;display:inline-block;margin-right:2px;border-radius:2px;'></image>
-    <image src='https://www.entertry.com/upload/1b63128bf3cc49199d20abba1b30e401.jpeg' style='width:20px;height:20px;display:inline-block;margin-right:2px;border-radius:2px;'></image>
-    <image src='https://www.entertry.com/upload/1b63128bf3cc49199d20abba1b30e401.jpeg' style='width:20px;height:20px;display:inline-block;margin-right:2px;border-radius:2px;'></image>
-    <label style='color:#bbb'>...</label>
-    <label class='iconfont icon-xinxing' style='color:#989898;position:absolute;right:28px;top:1px;font-size:20px;'></label>
+    <label style='color:#bbb' wx:if='{{cardobj.scanlist.length>=6}}'>...</label>
+    <label class='iconfont icon-xinxing {{isdz?"dianzan":"fdianzan"}}' style='position:absolute;right:28px;top:1px;font-size:20px;' bindtap='bindChangedz'></label>
   </view>
-  <view style='height:20px;padding:2px 10px;line-height:20px;font-size:11px;position:relative;color:#aaa;border-bottom:10px solid #f5f5f5;padding-bottom:12px;'>
-    <text style='line-height:27px;padding:0px 10px;'>浏览：6</text>
-    <label style='line-height:20px;position:absolute;right:25px;top:4px;'>点赞 3</label>
+  <view style='height:20px;padding:2px 10px;line-height:20px;font-size:11px;position:relative;color:#aaa;border-bottom:10px solid #f8f8f8;padding-bottom:12px;'>
+    <text style='line-height:27px;padding:0px 10px;'>浏览：{{cardobj.scanlist.length}}</text>
+    <label style='line-height:20px;position:absolute;right:25px;top:4px;'>点赞 {{cardobj.dzamount}}</label>
   </view>
 </view>
-<view style='border-bottom:10px solid #f5f5f5;padding-bottom:5px;'>
+<view style='border-bottom:10px solid #f8f8f8;padding-bottom:5px;'>
   <view style='font-size:15px;font-weight:bold;padding:10px 20px;'>我的个人简介</view>
-  <view style='font-size:14px;color:#b0b0b0;padding:5px 20px;'>大家好，我是某某某，企泰科技开发人员；大家好，我是某某某，企泰科技开发人员；大家好，我是某某某，企泰科技开发人员；大家好，我是某某某，企泰科技开发人员；大家好，我是某某某，企泰科技开发人员；大家好，我是某某某，企泰科技开发人员；大家好，我是某某某，企泰科技开发人员；大家好，我是某某某，企泰科技开发人员；</view>
+  <view style='font-size:14px;color:#b0b0b0;padding:5px 20px;'>{{cardobj.intro}}</view>
 </view>
 <view style='height:100%;width:100%;padding-bottom:5px;'>
   <view style='font-size:15px;font-weight:bold;padding:10px 20px;'>我的照片</view>
-  <image src='https://entertry.com/upload/20181029163005.jpg' style='height:450px;'></image>
+  <image src='https://entertry.com/upload/20181029163005.jpg' style='height:450px;' bindtap='bindpreview'></image>
 </view>
-<view style='width:40px;height:40px;line-height:40px;background-color:black;border-top-right-radius:25px;border-bottom-right-radius:25px;position:fixed;top:30px;opacity:0.38'><label class='iconfont icon-cards' style='color:white;font-size:21px;margin-left:5px;'></label></view>
+<view style='width:40px;height:40px;line-height:40px;background-color:black;border-top-right-radius:25px;border-bottom-right-radius:25px;position:fixed;top:30px;opacity:0.38' bindtap='bindtomyCards'>
+  <label class='iconfont icon-cards' style='color:white;font-size:21px;margin-left:5px;position:fixed;top:30px;'></label>
+</view>
+<view style='width:40px;height:40px;line-height:40px;background-color:#f7f7f7;position:fixed;bottom:50px;right:30px;border-radius:20px;' bindtap='bindtomyCards'>
+  <label class='iconfont icon-boshiweb_liuyan' style='color:#15aefa;font-size:21px;margin-left:10px;position:fixed;bottom:57px;'></label>
+  <label style='color:#888;font-size:10px;margin-left:10px;position:fixed;bottom:40px;'>留言</label>
+</view>

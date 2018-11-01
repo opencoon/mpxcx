@@ -19,3 +19,11 @@
 .usermotto {
   margin-top: 200px;
 }
+
+.dianzan{
+  color:#15aefa;
+}
+
+.fdianzan{
+  color:#989898;
+}

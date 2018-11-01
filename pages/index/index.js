@@ -4,11 +4,27 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    cardinfo: true
+    cardobj :{
+      company: {
+        name: "企泰信息科技",
+        imagepath: "qticon.ico"
+      },
+      empid: "1",
+      empname: "梁辉",
+      emppost: "开发人员",
+      mobnum: "13800000000",
+      wxnum: "webqt",
+      email: "try@entertry.com",
+      telphone: "020-88888888",
+      address: "广州市越秀区中桥大厦18楼D/F",
+      imgpath: "1b63128bf3cc49199d20abba1b30e401.jpeg",
+      intro: "大家好，我是某某某，企泰科技开发人员；大家好，我是某某某，企泰科技开发人员；大家好，我是某某某，企泰科技开发人员；大家好，我是某某某，企泰科技开发人员；大家好，我是某某某，企泰科技开发人员；大家好，我是某某某，企泰科技开发人员；大家好，我是某某某，企泰科技开发人员；大家好，我是某某某，企泰科技开发人员；",
+      perphoto : "",
+      dzamount: 1,
+      scanlist: [''],
+    },
+    cardinfo: true,
+    isdz: true
   },
   //事件处理函数
   bindViewTap: function() {
@@ -43,18 +59,74 @@ Page({
         }
       })
     }
+    wx.setEnableDebug({
+      enableDebug: true,
+    })
   },
   getUserInfo: function(e) {
-    console.log(e)
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
   },
+
+  //切换显示隐藏名片信息
   changecdsta: function(){
     this.setData({
       cardinfo: !this.data.cardinfo
+    })
+  },
+
+  //拨打电话
+  bindcallpop: e =>{
+    console.log(e)
+    let temp = {
+      phoneNumber : e.target.dataset.num
+    }
+    wx.makePhoneCall(temp);
+  },
+
+  //复制贴
+  bindClickboardData: e =>{
+    let temp = {
+      data : e.target.dataset.cont
+    }
+    wx.setClipboardData(temp)
+  },
+
+  //保存到通讯录
+  bindAddPhoneContact: function(){
+    let temp = {
+      firstName: this.data.cardobj.empname,
+      mobilePhoneNumber: this.data.cardobj.mobnum,
+      weChatNumber: this.data.cardobj.wxnum,
+      email: this.data.cardobj.email,
+      title: this.data.cardobj.emppost,
+      organization: this.data.cardobj.company.name,
+      addressStreet: this.data.cardobj.address,
+      hostNumber : this.data.cardobj.telphone,
+    }
+    wx.addPhoneContact(temp)
+  },
+
+  //是否点赞按钮
+  bindChangedz: function(){
+    this.setData({
+      isdz : !this.data.isdz
+    })
+  },
+
+  //切换到卡片列表
+  bindtomyCards: function(){
+    wx.navigateTo({
+      url: "../cards/cards" 
+    })
+  },
+
+  bindpreview: function(){
+    wx.previewImage({
+      urls: ['https://entertry.com/upload/20181029163005.jpg'],
     })
   }
 })

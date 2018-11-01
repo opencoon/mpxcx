@@ -1,13 +1,16 @@
 {
   "pages": [
+    "pages/dongtai/dongtai",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/guanwang/guanwang"
+    "pages/guanwang/guanwang",
+    "pages/cards/cards",
+    "pages/message/message"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "名片",
+    "navigationBarTitleText": "企泰科技",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
@@ -21,13 +24,13 @@
         "selectedIconPath": "./static/images/mingpian1.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/logs/logs",
         "text": "商城",
         "iconPath": "./static/images/sc.png",
         "selectedIconPath": "./static/images/sc1.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/dongtai/dongtai",
         "text": "动态",
         "iconPath": "./static/images/faxian.png",
         "selectedIconPath": "./static/images/faxian1.png"

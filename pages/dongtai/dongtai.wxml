@@ -1,0 +1,123 @@
+<view style='font-size:15px;'>
+
+    <view style='padding:12px 7px 20px 12px;position:relative;border-bottom:1px solid #dedede'>
+      <image style='width:50px;height:50px;border-radius:3px;position:absolute;top:22px;left:12px;' src='https://www.entertry.com/upload/1b63128bf3cc49199d20abba1b30e401.jpeg'></image>
+      <label style='position:absolute;top:17px;left:72px;font-size:18px;color:#294068;font-weight:bold;'>梁辉</label>
+      <button style='position:absolute;top:16px;right:5px;font-size:14px;color:#294068;height:20px;line-height:20px;background-color:white;'>转发</button>
+      <view style='padding-top:40px;padding-left:60px;padding-right:5px;padding-bottom:7px;'>定义新营销定新营销定义新。定义新营销定新营销定义新新。定义新营销定新营销定义新。定义新营销定新营销定义新。</view>
+      <view style='padding-left:60px;padding-bottom:3px;'>
+        <image style='height:95px;width:95px;' src='https://www.entertry.com/upload/1b63128bf3cc49199d20abba1b30e401.jpeg'></image>
+      </view>
+      <view style='padding-left:60px;font-size:13px;color:#76777b;position:relative;'> 
+        <label>{{time}}</label>
+        <image src='../../static/images/gengduo.png' style='height:18px;width:18px;position:absolute;right:15px;top:-2px;' bindtap='bindchangegd'></image>
+        <view style='width:120px;height:30px;position:absolute;background-color:#4d5154;top:-7px;right:40px;border-radius:3px;line-height:28px;' wx:if='{{isgd}}'>
+          <label style='color:#f0f0f0;padding:0 10px;fon-size:15px;'>
+              <label> <!-- 赞 -->
+                <label class='iconfont icon-xinxing' style='padding-right:6px;font-size:14px;'></label>赞
+              </label>
+              <label style='color:f7f7f7;font-size:11px;position:relative;top:-1px;left:7px;'>|</label> <!-- 分隔符 -->
+              <label style='margin-left:14px;'><!-- 评论 -->
+                <label class='iconfont icon-gengduo' style='padding-right:4px;font-size:14px;'></label>评论
+              </label>
+          </label>  <!-- 大框 -->
+        </view> <!-- 点赞弹出框 -->
+      </view>  <!-- 时间所在view -->
+      <view style='padding:8px 5px 5px 60px;position:relative;'>
+        <view style='width:0px;border-bottom:5px solid #f3f3f5;border-left:6px solid transparent;border-right:6px solid transparent;position:absolute;top:3px;left:66px;'></view> <!-- 上箭头 -->
+        <view style='height:22px;background-color:#f3f3f5;line-height:22px;padding:0 8px;font-size:14px;'>
+          <label class='iconfont icon-xinxing' style='color:#8598ae;margin-right:5px;font-size:12.5px;'></label>
+          <label style='color:#575d72;'>Raccoon,上九天捉鳖</label>
+        </view> <!-- 点赞列表 -->
+        <view style='height:20px;background-color:#f3f3f5;line-height:20px;padding:0 8px;font-size:14px;'>
+          <label style='color:#575d72;'>Ami</label>
+          <label >: 不错哦！</label>
+        </view>
+        <view style='height:20px;background-color:#f3f3f5;line-height:20px;padding:0 8px;font-size:14px;'>
+          <label style='color:#575d72;'>Raccoon</label>
+          <label >: 牛逼！</label>
+        </view>
+      </view>
+    </view>
+
+    <view style='padding:12px 7px 20px 12px;position:relative;border-bottom:1px solid #dedede'>
+      <image style='width:50px;height:50px;border-radius:3px;position:absolute;top:22px;left:12px;' src='https://www.entertry.com/upload/1b63128bf3cc49199d20abba1b30e401.jpeg'></image>
+      <label style='position:absolute;top:17px;left:72px;font-size:18px;color:#294068;font-weight:bold;'>梁辉</label>
+      <button style='position:absolute;top:16px;right:5px;font-size:14px;color:#294068;height:20px;line-height:20px;background-color:white;'>转发</button>
+      <view style='padding-top:40px;padding-left:60px;padding-right:5px;padding-bottom:7px;'>定义新营销定新营销定义新。定义新营销定新营销定义新新。定义新营销定新营销定义新。定义新营销定新营销定义新。</view>
+      <view style='padding-left:60px;padding-bottom:3px;'>
+        <image style='height:95px;width:95px;' src='https://www.entertry.com/upload/1b63128bf3cc49199d20abba1b30e401.jpeg'></image>
+      </view>
+      <view style='padding-left:60px;font-size:13px;color:#76777b;position:relative;'> 
+        <label>{{time}}</label>
+        <image src='../../static/images/gengduo.png' style='height:18px;width:18px;position:absolute;right:15px;top:-2px;' bindtap='bindchangegd'></image>
+        <view style='width:120px;height:30px;position:absolute;background-color:#4d5154;top:-7px;right:40px;border-radius:3px;line-height:28px;' wx:if='{{isgd}}'>
+          <label style='color:#f0f0f0;padding:0 10px;fon-size:15px;'>
+              <label> <!-- 赞 -->
+                <label class='iconfont icon-xinxing' style='padding-right:6px;font-size:14px;'></label>赞
+              </label>
+              <label style='color:f7f7f7;font-size:11px;position:relative;top:-1px;left:7px;'>|</label> <!-- 分隔符 -->
+              <label style='margin-left:14px;'><!-- 评论 -->
+                <label class='iconfont icon-gengduo' style='padding-right:4px;font-size:14px;'></label>评论
+              </label>
+          </label>  <!-- 大框 -->
+        </view> <!-- 点赞弹出框 -->
+      </view>  <!-- 时间所在view -->
+      <view style='padding:8px 5px 5px 60px;position:relative;'>
+        <view style='width:0px;border-bottom:5px solid #f3f3f5;border-left:6px solid transparent;border-right:6px solid transparent;position:absolute;top:3px;left:66px;'></view> <!-- 上箭头 -->
+        <view style='height:22px;background-color:#f3f3f5;line-height:22px;padding:0 8px;font-size:14px;'>
+          <label class='iconfont icon-xinxing' style='color:#8598ae;margin-right:5px;font-size:12.5px;'></label>
+          <label style='color:#575d72;'>Raccoon,上九天捉鳖</label>
+        </view> <!-- 点赞列表 -->
+        <view style='height:20px;background-color:#f3f3f5;line-height:20px;padding:0 8px;font-size:14px;'>
+          <label style='color:#575d72;'>Ami</label>
+          <label >: 不错哦！</label>
+        </view>
+        <view style='height:20px;background-color:#f3f3f5;line-height:20px;padding:0 8px;font-size:14px;'>
+          <label style='color:#575d72;'>Raccoon</label>
+          <label >: 牛逼！</label>
+        </view>
+      </view>
+    </view>
+
+    <view style='padding:12px 7px 20px 12px;position:relative;border-bottom:1px solid #dedede'>
+      <image style='width:50px;height:50px;border-radius:3px;position:absolute;top:22px;left:12px;' src='https://www.entertry.com/upload/1b63128bf3cc49199d20abba1b30e401.jpeg'></image>
+      <label style='position:absolute;top:17px;left:72px;font-size:18px;color:#294068;font-weight:bold;'>梁辉</label>
+      <button style='position:absolute;top:16px;right:5px;font-size:14px;color:#294068;height:20px;line-height:20px;background-color:white;'>转发</button>
+      <view style='padding-top:40px;padding-left:60px;padding-right:5px;padding-bottom:7px;'>定义新营销定新营销定义新。定义新营销定新营销定义新新。定义新营销定新营销定义新。定义新营销定新营销定义新。</view>
+      <view style='padding-left:60px;padding-bottom:3px;'>
+        <image style='height:95px;width:95px;' src='https://www.entertry.com/upload/1b63128bf3cc49199d20abba1b30e401.jpeg'></image>
+      </view>
+      <view style='padding-left:60px;font-size:13px;color:#76777b;position:relative;'> 
+        <label>{{time}}</label>
+        <image src='../../static/images/gengduo.png' style='height:18px;width:18px;position:absolute;right:15px;top:-2px;' bindtap='bindchangegd'></image>
+        <view style='width:120px;height:30px;position:absolute;background-color:#4d5154;top:-7px;right:40px;border-radius:3px;line-height:28px;' wx:if='{{isgd}}'>
+          <label style='color:#f0f0f0;padding:0 10px;fon-size:15px;'>
+              <label> <!-- 赞 -->
+                <label class='iconfont icon-xinxing' style='padding-right:6px;font-size:14px;'></label>赞
+              </label>
+              <label style='color:f7f7f7;font-size:11px;position:relative;top:-1px;left:7px;'>|</label> <!-- 分隔符 -->
+              <label style='margin-left:14px;'><!-- 评论 -->
+                <label class='iconfont icon-gengduo' style='padding-right:4px;font-size:14px;'></label>评论
+              </label>
+          </label>  <!-- 大框 -->
+        </view> <!-- 点赞弹出框 -->
+      </view>  <!-- 时间所在view -->
+      <view style='padding:8px 5px 5px 60px;position:relative;'>
+        <view style='width:0px;border-bottom:5px solid #f3f3f5;border-left:6px solid transparent;border-right:6px solid transparent;position:absolute;top:3px;left:66px;'></view> <!-- 上箭头 -->
+        <view style='height:22px;background-color:#f3f3f5;line-height:22px;padding:0 8px;font-size:14px;'>
+          <label class='iconfont icon-xinxing' style='color:#8598ae;margin-right:5px;font-size:12.5px;'></label>
+          <label style='color:#575d72;'>Raccoon,上九天捉鳖</label>
+        </view> <!-- 点赞列表 -->
+        <view style='height:20px;background-color:#f3f3f5;line-height:20px;padding:0 8px;font-size:14px;'>
+          <label style='color:#575d72;'>Ami</label>
+          <label >: 不错哦！</label>
+        </view>
+        <view style='height:20px;background-color:#f3f3f5;line-height:20px;padding:0 8px;font-size:14px;'>
+          <label style='color:#575d72;'>Raccoon</label>
+          <label >: 牛逼！</label>
+        </view>
+      </view>
+    </view>
+
+</view>
