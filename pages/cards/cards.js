@@ -1,7 +1,7 @@
 // pages/cards/cards.js
 var utils = require("../../utils/util.js")
 Page({
-
+// 11
   /**
    * 页面的初始数据
    */
